@@ -1,3 +1,10 @@
 language: java
 sudo: false
-script: mvn test
+script: mvn install
+deploy:
+  provider: releases
+  api_key:
+    secure: VOGEoJyDMNLTFLBd/aw4hTOxuDpZlPNL5+CbovivID9gT+HbLWV0D4aW1z8tuheq4OZzKH2GgyylabuO5BpsQccplR8EYCJdaDe0QLlLUQl5l3+7/TAkblEpjGDnzxSWR/s/EGRjF5YD1DGneSimE2td7ofeDv8H7xQ4XAODFzPZXSHVuCCML3y+rN4xd7Tjxbc8KSIA291ZMVFWPsPjFs/tCO9jVheVOXEkP8TYWyOQQAjdMDDMYuzAzM7iY7Ws5ZXIsXu75cChY5q2p0xMpsirBeyb+Zu1YA3C82g5sXurEdqkvRQxW2Bl4mY3saXyfhFBC7/obdZ3Wz5NnsXrdnfObGRMjryhveW3yyBBO2QWIohL6ZZHPD4K5Ai2tHEoeFc0Kg2dWTLKRmwMEJYvgscx2doya6H4xJgvvLVqhmN5ApQOXIlM6tq7YVNpve1RaLwnUmW52/nxoMTxRbs3sCHUr/0W70v5wQTbPe4ROcE5t2yt5yVDPZFcNKmEDqeoXvLq5NIC1Oyb/lhoETmysPe16WzbdP+ziJQvjfR+VlD3/jlFFKUxB2k13qD0X5bI4l/5gYA9RUqxtn4L1ksJBIz9Cx9rfS611rqiuMoyFcCyXMz73ioCSclz7l743knXZIizYAicb3CFe+IrD+6wPDR3u6npYg43D4kRDCFmjIs=
+  file: "/home/travis/.m2/repository/bbw/ch/mavenDemo2/0.0.1-SNAPSHOT/mavenDemo2-0.0.1-SNAPSHOT.jar"
+  on:
+    repo: BBWPR/MavenDemo2
